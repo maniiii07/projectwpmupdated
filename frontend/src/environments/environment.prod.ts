@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  backendUrl: 'https://projectwpm.onrender.com/api',
-  backendImageUrl: 'https://projectwpm.onrender.com/uploads'
+  backendUrl: 'https://projectwpmupdated.onrender.com/api',
+  backendImageUrl: 'https://projectwpmupdated.onrender.com/uploads'
 };
