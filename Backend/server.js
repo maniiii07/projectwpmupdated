@@ -13,7 +13,6 @@ const allowedOrigins = [
   // Use the correct URL of your deployed frontend
   'https://projectwpmupdated-1.onrender.com' 
 ];
-
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
