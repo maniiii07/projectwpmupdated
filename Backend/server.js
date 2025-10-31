@@ -30,6 +30,16 @@ app.use(express.json());
 // DB Connect
 connectDB();
 
+// ✅ --- ADD THIS ROOT ROUTE ---
+// This will be the message shown when you visit the base backend URL
+app.get('/', (req, res) => {
+  res.status(200).json({ 
+    message: "Welcome to the WPM Lost & Found API!",
+    status: "Server is running correctly." 
+  });
+});
+// ---
+
 // API Routes
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/items", require("./routes/itemRoutes"));
@@ -39,8 +49,6 @@ app.use("/api/admin", require("./routes/adminRoutes"));
 
 // Static folder for uploads
 app.use("/uploads", express.static("uploads"));
-
-// THE PROBLEMATIC CATCH-ALL ROUTE HAS BEEN REMOVED
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
