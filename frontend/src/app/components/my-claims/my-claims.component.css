@@ -1,0 +1,37 @@
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+.claim-list {
+  margin-top: 2rem;
+}
+.claim-entry {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.claim-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.item-title {
+  flex-grow: 1;
+}
+.claim-message {
+  color: #555;
+  font-style: italic;
+}
+.claim-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.status-pending { background-color: #fff9c4; color: #f57f17; }
+.status-accepted { background-color: #c8e6c9; color: #2e7d32; }
+.status-rejected { background-color: #ffcdd2; color: #c62828; }

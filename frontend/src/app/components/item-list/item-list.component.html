@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="header">
+    <h1>All Items</h1>
+    <a routerLink="/post-item" class="post-button">Post a New Item</a>
+  </div>
+
+  <div class="search-container">
+    <form class="search-form" (ngSubmit)="searchItems()">
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="Search for an item..."
+        [(ngModel)]="searchTerm"
+        name="searchTerm"> <button type="submit" class="search-button">Search</button>
+    </form>
+  </div>
+
+  <div class="item-grid">
+    <div class="item-card" *ngFor="let item of items">
+      <img *ngIf="item.photo" [src]="imageUrlPrefix + '/' + item.photo" alt="Photo of {{item.title}}" class="item-photo">
+      <div class="item-details">
+        <h3 class="item-title">{{ item.title }}</h3>
+        <p class="item-description">{{ item.description }}</p>
+        <span class="item-tag">{{ item.location }}</span>
+        <span class="item-tag type-{{item.type}}">{{ item.type }}</span>
+      </div>
+      <div class="card-actions">
+  <button *ngIf="canClaim(item)" class="claim-button" (click)="openClaimModal(item)">
+    Claim This Item
+  </button>
+  <button *ngIf="canContactOwner(item)" class="contact-owner-button" (click)="openClaimModal(item); $event.preventDefault()">
+    I Found This
+  </button>
+  <button *ngIf="item.status === 'claimed'" class="claimed-button" disabled>
+    Claimed
+  </button>
+
+  
+</div>
+
+    </div>
+  </div>
+</div>
+
+<app-claim-modal *ngIf="isModalOpen" [item]="selectedItemForClaim" (close)="closeClaimModal()"></app-claim-modal>

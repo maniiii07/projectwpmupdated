@@ -1,0 +1,70 @@
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Styles for the new User Details card */
+.user-details-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.user-details-card h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.detail-item {
+  display: flex;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+.detail-item .label {
+  font-weight: bold;
+  color: #555;
+  width: 100px;
+}
+.detail-item .value {
+  color: #333;
+}
+
+/* Styles for the action cards */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.profile-card {
+  display: block;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.card-content p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}

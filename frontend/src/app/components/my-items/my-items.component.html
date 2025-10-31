@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>My Posted Items</h1>
+  <div *ngIf="myItems.length === 0" class="no-items-message">You have not posted any items yet.</div>
+
+  <div class="item-list">
+    <div *ngFor="let item of myItems" class="item-entry">
+      <div class="item-info">
+        <span class="item-title">{{ item.title }}</span>
+        <span class="item-status status-{{item.status}}">{{ item.status }}</span>
+        <button (click)="viewClaims(item._id)" class="view-claims-btn">
+          {{ selectedItemId === item._id ? 'Hide Messages/Claims' : 'View Messages/Claims' }}
+        </button>
+        <button (click)="fileInput.click()" class="btn-change-photo">Change Photo</button>
+        <button (click)="deleteItem(item._id)" class="btn-delete">Delete</button>
+        <input type="file" #fileInput style="display: none;" (change)="onPhotoSelected($event, item._id)">
+      </div>
+
+      <div *ngIf="selectedItemId === item._id" class="claims-section">
+
+        <h3 *ngIf="item.type === 'found'" class="claims-title">Pending Claims on Your Item</h3>
+
+        <h3 *ngIf="item.type === 'lost'" class="claims-title">Messages from Finders</h3>
+
+        <div *ngIf="claims.length === 0" class="no-items-message">No messages or claims for this item yet.</div>
+
+        <div *ngFor="let claim of claims" class="claim-card">
+          <p><strong>From:</strong> {{ claim.claimant.name }} ({{ claim.claimant.email }})</p>
+          <p><strong>Message:</strong> "{{ claim.message }}"</p>
+          <p><strong>Status:</strong> <span class="status-{{claim.status}}">{{ claim.status }}</span></p>
+
+          <div *ngIf="claim.status === 'pending'" class="action-buttons">
+            <button (click)="handleClaim(claim._id, 'accepted')" class="btn-accept">Accept</button>
+            <button (click)="handleClaim(claim._id, 'rejected')" class="btn-reject">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

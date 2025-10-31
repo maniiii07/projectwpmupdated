@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>My Submitted Claims</h1>
+  <div *ngIf="myClaims.length === 0">You have not submitted any claims yet.</div>
+
+  <div class="claim-list">
+    <div *ngFor="let claim of myClaims" class="claim-entry">
+      <div class="claim-info">
+        <span class="item-title">Claim on: <strong>{{ claim.item?.title || 'Item Deleted' }}</strong></span>
+        <span class="claim-status status-{{claim.status}}">{{ claim.status }}</span>
+      </div>
+      <div class="claim-message">
+        <p><strong>Your message:</strong> "{{ claim.message }}"</p>
+      </div>
+    </div>
+  </div>
+</div>

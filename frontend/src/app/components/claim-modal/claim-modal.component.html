@@ -1,0 +1,17 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Claim "{{ item?.title }}"</h2>
+    <p>Please provide a message to help the owner verify your claim (e.g., mention a unique feature, your name on the item, etc.).</p>
+
+    <form (ngSubmit)="submitClaim()">
+      <div class="input-group">
+        <label for="claimMessage">Your Message</label>
+        <textarea id="claimMessage" name="claimMessage" [(ngModel)]="claimMessage" rows="4" required></textarea>
+      </div>
+      <div class="button-group">
+        <button type="button" (click)="closeModal()" class="btn-secondary">Cancel</button>
+        <button type="submit" class="btn-primary">Submit Claim</button>
+      </div>
+    </form>
+  </div>
+</div>

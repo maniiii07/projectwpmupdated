@@ -1,0 +1,238 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.item-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+.item-card:hover {
+    transform: translateY(-5px);
+}
+.item-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.item-details {
+  padding: 1rem;
+  flex-grow: 1;
+}
+.item-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.item-description {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.item-tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+.type-lost {
+    background-color: #ffcdd2; /* Light red */
+    color: #c62828; /* Dark red */
+}
+.type-found {
+    background-color: #c8e6c9; /* Light green */
+    color: #2e7d32; /* Dark green */
+}
+
+/* Add these new styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.post-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.post-button:hover {
+  background-color: #45a049;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.post-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.post-button:hover {
+  background-color: #45a049;
+}
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.item-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+}
+.item-card:hover {
+    transform: translateY(-5px);
+}
+.item-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.item-details {
+  padding: 1rem;
+  flex-grow: 1;
+}
+.item-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.item-description {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+.item-tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+.type-lost {
+    background-color: #ffcdd2; /* Light red */
+    color: #c62828; /* Dark red */
+}
+.type-found {
+    background-color: #c8e6c9; /* Light green */
+    color: #2e7d32; /* Dark green */
+}
+
+/* These are the new styles for the claim button */
+.card-actions {
+  padding: 0 1rem 1rem 1rem;
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+.claim-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff9800; /* Orange */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.claim-button:hover {
+  background-color: #f57c00;
+}
+/* Add these new search styles */
+/* Add/Update these search styles */
+.search-container {
+  margin-bottom: 2rem;
+}
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.search-input {
+  flex-grow: 1; /* Allows the input to take up available space */
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.search-button {
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Add this style for the disabled 'Claimed' button */
+.claimed-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #e0e0e0; /* Gray */
+  color: #757575;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: not-allowed; /* Show a 'not allowed' cursor */
+}
+/* Add this style for the new "I Found This" button */
+.contact-owner-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Blue */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-owner-button:hover {
+  background-color: #0056b3;
+}

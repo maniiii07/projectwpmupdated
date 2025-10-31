@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>Admin Dashboard</h1>
+  
+  <div class="dashboard-section">
+    <h2>Manage All Items</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Posted By</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.title }}</td>
+          <td>{{ item.postedBy?.name || 'N/A' }}</td>
+          <td>{{ item.status }}</td>
+          <td>
+            <button (click)="deleteItem(item._id)" class="btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="dashboard-section">
+    <h2>Manage All Users</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.role }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

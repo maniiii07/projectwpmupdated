@@ -1,0 +1,45 @@
+<div class="form-container">
+  <h2>Report a New Item</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label for="type">Are you reporting a...</label>
+      <select id="type" name="type" [(ngModel)]="itemData.type" required>
+        <option value="lost">Lost Item</option>
+        <option value="found">Found Item</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="title">Item Title</label>
+      <input type="text" id="title" name="title" [(ngModel)]="itemData.title" required placeholder="e.g., Black Backpack">
+    </div>
+
+    <div class="input-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" [(ngModel)]="itemData.description" placeholder="e.g., Has a keychain on the zipper"></textarea>
+    </div>
+
+    <div class="input-group">
+      <label for="category">Category</label>
+      <select id="category" name="category" [(ngModel)]="itemData.category" required>
+        <option value="Electronics">Electronics</option>
+        <option value="Books">Books</option>
+        <option value="ID Card">ID Card</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="location">Location Found/Lost</label>
+      <input type="text" id="location" name="location" [(ngModel)]="itemData.location" required placeholder="e.g., College Library">
+    </div>
+
+    <div class="input-group">
+      <label for="photo">Photo of the Item</label>
+      <input type="file" id="photo" (change)="onFileSelected($event)">
+    </div>
+
+    <button type="submit" class="submit-button">Submit Item</button>
+  </form>
+</div>

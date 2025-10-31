@@ -1,0 +1,94 @@
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  /* Dark, sleek gradient background */
+  background: linear-gradient(90deg, #1A2980 0%, #26D0CE 100%);
+  padding: 0 2rem;
+  /* A softer, more pronounced shadow for a floating effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  height: 70px; /* Slightly taller for a more premium feel */
+}
+
+.nav-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links li {
+    position: relative; /* Needed for the underline effect */
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for a softer look */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation on hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: #26D0CE; /* Vibrant teal accent */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff; /* Full white on hover */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.logout-button {
+  background: transparent;
+  border: 2px solid #26D0CE; /* Teal border */
+  border-radius: 50px; /* Pill shape */
+  color: #26D0CE; /* Teal text */
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #26D0CE; /* Fill with teal on hover */
+    color: white;
+}
