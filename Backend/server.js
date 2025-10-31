@@ -8,7 +8,8 @@ const app = express();
 // ✅ --- START OF THE FIX ---
 // Define which frontend URLs are allowed to connect
 const allowedOrigins = [
-  'http://localhost:4200'
+  'http://localhost:4200',
+  'https://projectwpmupdated-1.onrender.com'
 ];
 
 const corsOptions = {
