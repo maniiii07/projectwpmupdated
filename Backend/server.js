@@ -11,7 +11,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:4200',
   // Add your deployed frontend URL here
-  'https://projectwpmupdated-1.onrender.com'
+  'https://projectwpm-frontend.onrender.com'
 ];
 const corsOptions = {
   origin: function (origin, callback) {
